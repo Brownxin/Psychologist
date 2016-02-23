@@ -153,10 +153,46 @@
             </objects>
             <point key="canvasLocation" x="-252" y="711"/>
         </scene>
-        <!--Happiness View Controller-->
+        <!--Text View Controller-->
+        <scene sceneID="N9a-8E-Hsz">
+            <objects>
+                <viewController id="HFW-Fz-IXX" customClass="TextViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ue1-ww-qBR"/>
+                        <viewControllerLayoutGuide type="bottom" id="vq9-0i-7KZ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2Eg-9P-Pn4" customClass="Tex">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Rt9-7S-RTB">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Rt9-7S-RTB" firstAttribute="leading" secondItem="2Eg-9P-Pn4" secondAttribute="leading" id="GSa-9j-1mz"/>
+                            <constraint firstItem="Rt9-7S-RTB" firstAttribute="bottom" secondItem="vq9-0i-7KZ" secondAttribute="top" id="Zv3-aJ-vhs"/>
+                            <constraint firstItem="Rt9-7S-RTB" firstAttribute="top" secondItem="2Eg-9P-Pn4" secondAttribute="top" id="opY-KT-Hll"/>
+                            <constraint firstAttribute="trailing" secondItem="Rt9-7S-RTB" secondAttribute="trailing" id="svI-Yr-kkI"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="textView" destination="Rt9-7S-RTB" id="bzI-ux-ZRD"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fSs-Qh-L8d" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2185" y="1147"/>
+        </scene>
+        <!--Diagnosed Happiness View Controller-->
         <scene sceneID="3gG-yv-oLa">
             <objects>
-                <viewController id="mby-Se-6CH" customClass="HappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="mby-Se-6CH" customClass="DiagnosedHappinessViewController" customModule="Psychologist" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="gef-r0-t2C"/>
                         <viewControllerLayoutGuide type="bottom" id="12C-Hr-WZM"/>
@@ -193,7 +229,15 @@
                             <constraint firstItem="w2l-CL-bCJ" firstAttribute="bottom" secondItem="12C-Hr-WZM" secondAttribute="top" id="kP9-O2-nR9"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="iMe-eu-OOF"/>
+                    <navigationItem key="navigationItem" id="iMe-eu-OOF">
+                        <barButtonItem key="rightBarButtonItem" title="History" id="qgQ-OB-YtA">
+                            <connections>
+                                <segue destination="HFW-Fz-IXX" kind="popoverPresentation" identifier="Show Diagnostic History" popoverAnchorBarButtonItem="qgQ-OB-YtA" id="5PL-Vv-9vp">
+                                    <popoverArrowDirection key="popoverArrowDirection" up="YES" down="YES" left="YES" right="YES"/>
+                                </segue>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                     <connections>
                         <outlet property="faceView" destination="w2l-CL-bCJ" id="Sd6-bi-YsB"/>
                     </connections>
