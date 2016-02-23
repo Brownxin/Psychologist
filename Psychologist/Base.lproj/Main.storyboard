@@ -39,7 +39,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mby-Se-6CH" kind="showDetail" identifier="happy" id="RaT-QO-IBj"/>
+                                    <segue destination="0AU-FJ-UyU" kind="showDetail" identifier="happy" id="RaT-QO-IBj"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TV1-Cy-yJj">
@@ -57,7 +57,7 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mby-Se-6CH" kind="showDetail" identifier="meh" id="bF3-kf-Np7"/>
+                                    <segue destination="0AU-FJ-UyU" kind="showDetail" identifier="meh" id="bF3-kf-Np7"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CrK-up-Nlq">
@@ -75,7 +75,19 @@
                                     </mask>
                                 </variation>
                                 <connections>
-                                    <segue destination="mby-Se-6CH" kind="showDetail" identifier="sad" id="nLP-l5-MnB"/>
+                                    <segue destination="0AU-FJ-UyU" kind="showDetail" identifier="sad" id="nLP-l5-MnB"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BF4-fK-VNd">
+                                <rect key="frame" x="262.5" y="358" width="75" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="75" id="LeZ-x7-N1S"/>
+                                    <constraint firstAttribute="height" constant="30" id="bRI-sm-SFk"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal" title="Nothing!"/>
+                                <connections>
+                                    <action selector="nothing:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tZB-35-5hd"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -86,7 +98,9 @@
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="centerX" secondItem="TV1-Cy-yJj" secondAttribute="centerX" id="Brl-ad-d2P"/>
                             <constraint firstItem="TV1-Cy-yJj" firstAttribute="top" secondItem="khQ-Rf-Df8" secondAttribute="bottom" constant="14" id="ChV-eg-qzb"/>
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" constant="241" id="EMf-7o-dAg"/>
+                            <constraint firstItem="BF4-fK-VNd" firstAttribute="top" secondItem="TV1-Cy-yJj" secondAttribute="bottom" constant="21" id="Gkl-GX-J3N"/>
                             <constraint firstItem="S3Y-uV-rmd" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="3" id="NhA-Oa-jhd"/>
+                            <constraint firstItem="BF4-fK-VNd" firstAttribute="trailing" secondItem="TV1-Cy-yJj" secondAttribute="trailing" id="Nhh-xP-UDG"/>
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="centerX" secondItem="TV1-Cy-yJj" secondAttribute="centerX" id="Rho-FF-g8Z"/>
                             <constraint firstItem="TV1-Cy-yJj" firstAttribute="top" secondItem="khQ-Rf-Df8" secondAttribute="bottom" constant="14" id="SjB-nD-2VL"/>
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="centerX" secondItem="S3Y-uV-rmd" secondAttribute="centerX" id="ZnS-zJ-wqm"/>
@@ -96,6 +110,7 @@
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rQ2-SH-vFF"/>
                             <constraint firstItem="CrK-up-Nlq" firstAttribute="centerX" secondItem="khQ-Rf-Df8" secondAttribute="centerX" id="rwS-Wy-GB5"/>
                             <constraint firstItem="S3Y-uV-rmd" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wZ2-d6-KhN"/>
+                            <constraint firstItem="BF4-fK-VNd" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="weN-4f-91y"/>
                             <constraint firstItem="TV1-Cy-yJj" firstAttribute="centerX" secondItem="khQ-Rf-Df8" secondAttribute="centerX" id="wyX-UR-nVc"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="S3Y-uV-rmd" secondAttribute="bottom" constant="484" id="yfx-zA-XkX"/>
                             <constraint firstItem="khQ-Rf-Df8" firstAttribute="centerX" secondItem="CrK-up-Nlq" secondAttribute="centerX" id="ypn-Ya-8kY"/>
@@ -111,15 +126,19 @@
                                 <exclude reference="ypn-Ya-8kY"/>
                                 <exclude reference="SjB-nD-2VL"/>
                                 <exclude reference="qNq-wx-DXq"/>
+                                <exclude reference="Nhh-xP-UDG"/>
                                 <exclude reference="yfx-zA-XkX"/>
                             </mask>
                         </variation>
                     </view>
                     <navigationItem key="navigationItem" title="Psychologist" id="inI-6m-0qK"/>
+                    <connections>
+                        <segue destination="0AU-FJ-UyU" kind="showDetail" identifier="nothing" id="QFC-5q-9Gc"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1468" y="391"/>
+            <point key="canvasLocation" x="1512" y="391"/>
         </scene>
         <!--Split View Controller-->
         <scene sceneID="Z0X-yN-LFA">
@@ -127,7 +146,7 @@
                 <splitViewController id="2Fd-4h-MRe" sceneMemberID="viewController">
                     <connections>
                         <segue destination="zPD-X9-yxL" kind="relationship" relationship="masterViewController" id="4HU-ch-io9"/>
-                        <segue destination="mby-Se-6CH" kind="relationship" relationship="detailViewController" id="YOc-N4-hco"/>
+                        <segue destination="0AU-FJ-UyU" kind="relationship" relationship="detailViewController" id="YOc-N4-hco"/>
                     </connections>
                 </splitViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qtI-6b-7NC" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -174,6 +193,7 @@
                             <constraint firstItem="w2l-CL-bCJ" firstAttribute="bottom" secondItem="12C-Hr-WZM" secondAttribute="top" id="kP9-O2-nR9"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="iMe-eu-OOF"/>
                     <connections>
                         <outlet property="faceView" destination="w2l-CL-bCJ" id="Sd6-bi-YsB"/>
                     </connections>
@@ -185,12 +205,11 @@
                     </connections>
                 </panGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1198" y="1255"/>
+            <point key="canvasLocation" x="1505" y="1147"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="KQj-b6-UcQ">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Wow-IR-ilD" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="zPD-X9-yxL" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="1D8-eZ-HvQ">
@@ -202,11 +221,30 @@
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Yci-XZ-Ocv"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wow-IR-ilD" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="656" y="391"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="iJi-bT-PcN">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0AU-FJ-UyU" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="GEz-58-Gay">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="mby-Se-6CH" kind="relationship" relationship="rootViewController" id="sks-qZ-Mmz"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="t9u-kM-fkV" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="656" y="1147"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="bF3-kf-Np7"/>
+        <segue reference="QFC-5q-9Gc"/>
     </inferredMetricsTieBreakers>
 </document>

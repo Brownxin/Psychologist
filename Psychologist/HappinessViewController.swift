@@ -31,7 +31,8 @@ class HappinessViewController: UIViewController, FaceViewDataSource {
     }
     
     private func updateUI() {
-        faceView.setNeedsDisplay()
+        faceView?.setNeedsDisplay()
+        title = "\(happiness)"
     }
     
     private struct Constants {
